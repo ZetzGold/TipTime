@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipTime.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <HorizontalStackLayout>
+                <Grid>
+                    <Label
+                        Text="Valor:"
+                        Style="{StaticResource Headline}"
+                        SemanticProperties.HeadingLevel="Level1" 
+                        TextColor="Black"/>
+                </Grid>
+                <Grid>
+                    <Entry x:Name="TextValor"
+                        Placeholder="Digite o Valor"/>
+                </Grid>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Grid>
+                    <Label
+                        Text="Gorjeta:"
+                        Style="{StaticResource Headline}"
+                        SemanticProperties.HeadingLevel="Level1" 
+                        TextColor="Black"/>
+                </Grid>
+                <Grid>
+                    <Entry x:Name="TextGorjeta"
+                        Placeholder="Digite a Gorjeta"/>
+                </Grid>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Grid>
+                    <Label
+                        Text="Total:"
+                        Style="{StaticResource Headline}"
+                        SemanticProperties.HeadingLevel="Level1" 
+                        TextColor="Black"/>
+                </Grid>
+                <Grid>
+                    <Entry x:Name="TextTotal"
+                        Placeholder="Digite o Valor Total"/>
+                </Grid>
+            </HorizontalStackLayout>
+            <Slider x:Name="Slider" BackgroundColor="White" ThumbColor="black" MinimumTrackColor="Purple" ValueChanged="Slider_ValueChanged"> </Slider>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Grid>
+                    <Button
+                        Clicked="Button15_Clicked"
+                        Text="15%"
+                        WidthRequest="500"
+                        FontSize="50"
+                        Margin="10,0,10,0"/>
+                </Grid>
+                <Grid>
+                    <Button
+                        Clicked="Button30_Clicked"
+                        Text="30%"
+                        WidthRequest="500"
+                        FontSize="50"
+                        Margin="10,0,10,0"/>
+                </Grid>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Grid>
+                    <Button Clicked="Clicked_Cima"
+                        Text="Arredondar para Cima"
+                        WidthRequest="500"
+                        FontSize="30"
+                        Margin="10,0,10,0"/>
+                </Grid>
+                <Grid>
+                    <Button Clicked="Clicked_Baixo"
+                        Text="Arredondar para Baixo"
+                        WidthRequest="500"
+                        FontSize="30"
+                        Margin="10,0,10,0"/>
+                </Grid>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
